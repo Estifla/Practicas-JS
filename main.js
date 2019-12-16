@@ -43,3 +43,18 @@ var nombres = ['Victor','Eduardo','Andres'];
 for (i = 0; i < nombres.length; i++){
     document.write(nombres[i] + '<br/>')
 }
+
+/* Objetos JSON con metodo */
+var coche = {
+    modelo: 'Audi TT',
+    maxima: 500,
+    antiguedad: 2019,
+    mostrarDatos(){
+        console.log(this.modelo, this.maxima, this.antiguedad);
+    }
+};
+
+document.write("<h1>"+coche.modelo+"</h1>")
+coche.mostrarDatos(); /* Estos datos se ven por consola del navegador */
+
+
