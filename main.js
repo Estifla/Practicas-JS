@@ -58,3 +58,28 @@ document.write("<h1>"+coche.modelo+"</h1>")
 coche.mostrarDatos(); /* Estos datos se ven por consola del navegador */
 
 
+/* Promesa */
+
+var saludar = new Promise ((resolve, reject) =>{
+    setTimeout(() =>{
+        let saludo = " Hola chaval , soy un saludo dentro de una promesa";
+        if(saludo){
+            resolve(saludo);
+    
+        }else{
+            reject("No hay saludo disponible");
+        }
+    }, 2000)
+
+});
+
+saludar.then(resultado =>{
+    alert(resultado);
+}
+)
+.catch(err =>{
+    alert(err);
+    
+});
+
+
